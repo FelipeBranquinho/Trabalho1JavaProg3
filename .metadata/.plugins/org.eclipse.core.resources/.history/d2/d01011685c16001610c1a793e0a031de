@@ -1,0 +1,15 @@
+package jrf;
+
+import java.util.*;
+
+public class Disciplina {
+	private String nome;
+	private String codigo;
+	//private ArrayList<Aluno> aluno;
+	//private ArrayList<Exame> exame;
+	
+	public Disciplina(String nome, String codigo){
+		this.nome = nome;
+		this.codigo = codigo;
+	}
+};

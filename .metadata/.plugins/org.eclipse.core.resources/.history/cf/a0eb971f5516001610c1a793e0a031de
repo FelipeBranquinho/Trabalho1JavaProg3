@@ -1,0 +1,19 @@
+package jrf;
+import java.util.*;
+
+public class Sistema {
+	private Map cursos = new HashMap();
+	//private ArrayList<Disciplina> disciplina;
+	
+	public Sistema(String nome, int codigo){
+		
+	}
+	
+	public void addCurso(String nome, int codigo){
+		this.cursos.put(codigo, nome);
+	}
+	
+	public Object getCurso(int codigo){
+		return this.cursos.get(codigo);
+	}
+};
