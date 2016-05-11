@@ -1,0 +1,16 @@
+package jrf;
+
+public class Nota {
+	private double nota;
+	private String codigoEx;
+	
+	public Nota(double nota, String codigEx){
+		this.nota = nota;
+		this.codigoEx = codigoEx;
+	}
+	
+	@Override
+	public String toString(){
+		return nota + ";";
+	}
+};

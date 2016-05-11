@@ -1,0 +1,52 @@
+package jrf;
+import java.util.*;
+
+public class Disciplina {
+	private String nome;
+	private String codigo;
+	private Map<Integer,Aluno> aluno;
+	private Map<String,Exame> exame;
+	
+	public Disciplina(String nome, String codigo){
+		this.nome = nome;
+		this.codigo = codigo;
+		this.aluno = new HashMap<Integer,Aluno>();
+		this.exame = new HashMap<String,Exame>();
+	}
+	
+	public void addAluno(String nome, int matricula, String tipo, int curso){
+		if(!aluno.containsValue(matricula))
+			aluno.put(matricula, new Grad(nome, matricula, tipo, curso));
+	}
+	
+	public void addAluno(String nome, int matricula, String tipo, String curso){
+		if(!aluno.containsValue(matricula))
+			aluno.put(matricula, new PosGrad(nome, matricula, tipo, curso));
+	}
+	
+	public void addExame(String codigoEx, String nomeEx, double pesoEx, String tipoEx, Date dataEx){
+		if(!exame.containsValue(codigoEx))
+			exame.put(codigoEx, new Exame(codigoEx, nomeEx, pesoEx, tipoEx, dataEx)); //Trocar depois para polimorfismo
+	}
+	
+	public Aluno getAluno(int matriculaAl){
+		return aluno.get(matriculaAl);
+	}
+	
+	public Exame getExame(String codigoEx){
+		return exame.get(codigoEx);
+	}
+	
+	@Override
+	public String toString(){
+		return codigo + ";" + nome;
+	}
+	
+	public String getCodigoDisciplina(){
+		return codigo;
+	}
+	
+	public pautaFinal(){
+		ArrayList<Aluno> listAluno = 
+	}
+};

@@ -2,11 +2,19 @@ package jrf;
 
 public class Nota {
 	private double nota;
-	//private Exame exame;
+	private String codigoEx;
 	
-	public Nota(double nota){
+	public Nota(double nota, String codigoEx){
 		this.nota = nota;
-		//this.exame;
+		this.codigoEx = codigoEx;
+	}
+	
+	public String getCodigoEx(){
+		return codigoEx;
+	}
+	
+	public double getNota(){
+		return nota;
 	}
 	
 	@Override

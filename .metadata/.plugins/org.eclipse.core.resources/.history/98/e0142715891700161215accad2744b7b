@@ -1,0 +1,6 @@
+package jrfp;
+import java.util.*;
+
+public class ComparatorInts {
+	public Map<Integer,Object> base;
+}

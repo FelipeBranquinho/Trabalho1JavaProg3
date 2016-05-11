@@ -5,22 +5,22 @@ public class Sistema {
 	private Map<Integer,String> cursos;
 	private Map<String,Disciplina> disciplina;
 	
-	public Sistema(String nome, int codigo){
+	public Sistema(){
 		this.cursos = new HashMap<Integer,String>();
 		this.disciplina = new HashMap<String,Disciplina>();
 	}
 	
-	public void addCurso(String nome, int codigo){
-		cursos.put(codigo, nome);
+	public void addCurso(String nomeCur, int codigoCur){
+		cursos.put(codigoCur, nomeCur);
 	}
 	
-	public String getCodigoCurso(int codigo){
-		return cursos.get(codigo);
+	public String getCodigoCurso(int codigoCur){
+		return cursos.get(codigoCur);
 	}
 	
-	public void addDisciplina(String nome, String codigo){
-		if(!disciplina.containsValue(codigo))
-			disciplina.put(codigo, new Disciplina(nome, codigo));
+	public void addDisciplina(String nomeDisc, String codigoDisc){
+		if(!disciplina.containsValue(codigoDisc))
+			disciplina.put(codigoDisc, new Disciplina(nomeDisc, codigoDisc));
 	}
 	
 	@Override

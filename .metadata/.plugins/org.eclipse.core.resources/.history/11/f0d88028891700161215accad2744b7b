@@ -1,0 +1,15 @@
+package jrfp;
+import java.util.*;
+
+public class ComparatorInts implements ComparatorInt{
+	public Map<Integer,Object> base;
+	
+	public ComparatorInts(Map<Integer,Object> base){
+		this.base = base;
+	}
+	
+	@Override
+	public int compare(Integer base1, Integer base2){
+		return compare
+	}
+}

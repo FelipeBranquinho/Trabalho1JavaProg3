@@ -1,0 +1,58 @@
+package jrf;
+import java.util.*;
+
+public class Disciplina {
+	private String nome;
+	private String codigo;
+	private Map<Integer,Aluno> aluno;
+	private Map<String,Exame> exame;
+	
+	public Disciplina(String nome, String codigo){
+		this.nome = nome;
+		this.codigo = codigo;
+		this.aluno = new HashMap<Integer,Aluno>();
+		this.exame = new HashMap<String,Exame>();
+	}
+	
+	public void addAluno(String nomeAl, int matriculaAl, String tipoAl, int cursoAl){
+		if(!aluno.containsValue(matriculaAl))
+			aluno.put(matriculaAl, new Grad(nomeAl, matriculaAl, tipoAl, cursoAl));
+	}
+	
+	public void addAluno(String nomeAl, int matriculaAl, String tipoAl, String cursoAl){
+		if(!aluno.containsValue(matriculaAl))
+			aluno.put(matriculaAl, new PosGrad(nomeAl, matriculaAl, tipoAl, cursoAl));
+	}
+	
+	public void addExame(String codigoEx, String nomeEx, double pesoEx, String tipoEx, Date dataEx){
+		if(!exame.containsValue(codigoEx))
+			exame.put(codigoEx, new Exame(codigoEx, nomeEx, pesoEx, tipoEx, dataEx)); //Trocar depois para polimorfismo
+	}
+	
+	public Aluno getAluno(int matriculaAl){
+		return aluno.get(matriculaAl);
+	}
+	
+	public Exame getExame(String codigoEx){
+		return exame.get(codigoEx);
+	}
+	
+	@Override
+	public String toString(){
+		return codigo + ";" + nome;
+	}
+	
+	public String getCodigoDisciplina(){
+		return codigo;
+	}
+	
+	@Override
+	public int compare(Integer primeiroAl, Integer segundoAl){
+		return aluno.get(primeiroAl).compareTo(aluno.get(segundoAl));
+	}
+	
+	public void pautaFinal(){
+		//ArrayList<Aluno> listAluno = new ArrayList<Aluno>(aluno.values());
+		
+	}
+};
