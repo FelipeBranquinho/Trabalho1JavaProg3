@@ -8,7 +8,7 @@ public class PosGrad extends Aluno{
 		this.curso = curso;
 	}
 	
-	public String getCurso(){
+	public String getCursoPosGrad(){
 		return curso;
 	}
 };

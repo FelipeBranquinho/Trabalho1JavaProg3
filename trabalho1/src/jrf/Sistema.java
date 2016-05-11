@@ -3,23 +3,24 @@ import java.util.*;
 
 public class Sistema {
 	private Map<Integer,String> cursos;
-	private ArrayList<Disciplina> disciplina;
+	private Map<String,Disciplina> disciplina;
 	
 	public Sistema(String nome, int codigo){
 		this.cursos = new HashMap<Integer,String>();
-		this.disciplina = new ArrayList<Disciplina>();
+		this.disciplina = new HashMap<String,Disciplina>();
 	}
 	
 	public void addCurso(String nome, int codigo){
 		cursos.put(codigo, nome);
 	}
 	
-	public String getCurso(int codigo){
+	public String getCodigoCurso(int codigo){
 		return cursos.get(codigo);
 	}
 	
 	public void addDisciplina(String nome, String codigo){
-		disciplina.add(new Disciplina(nome, codigo));
+		if(!disciplina.containsValue(codigo))
+			disciplina.put(codigo, new Disciplina(nome, codigo));
 	}
 	
 	@Override

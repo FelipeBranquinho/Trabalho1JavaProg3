@@ -8,7 +8,7 @@ public class Grad extends Aluno{
 		this.curso = curso;
 	}
 	
-	public int getCurso(){
+	public int getCursoGrad(){
 		return curso;
 	}
 };

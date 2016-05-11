@@ -4,11 +4,13 @@ public class Aluno {
 	private String nome;
 	private int matricula;
 	private String tipo;
+	//private Map<String,Nota> nota;
 	
 	public Aluno(String nome, int matricula, String tipo){
 		this.nome = nome;
 		this.matricula = matricula;
 		this.tipo = tipo;
+		//this.nota = new HashMap<String,Nota>();
 	}
 	
 	@Override
@@ -16,7 +18,7 @@ public class Aluno {
 		return matricula + ";" + nome;
 	}
 	
-	public String getTipo(){
+	public String getTipoAluno(){
 		return tipo;
 	}
 };
