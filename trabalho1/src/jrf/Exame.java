@@ -32,4 +32,16 @@ public class Exame {
 	public String getTipoExame(){
 		return tipo;
 	}
+	
+	public Date getDataExame(){
+		return data;
+	}
+	
+	public static Comparator<Exame> comparaExameData = new Comparator<Exame>(){
+		public int compare(Exame d1, Exame d2){
+			Date nomeData1 = d1.getDataExame();
+			Date nomeData2 = d2.getDataExame();
+			return nomeData1.compareTo(nomeData2);
+		}
+	};
 };

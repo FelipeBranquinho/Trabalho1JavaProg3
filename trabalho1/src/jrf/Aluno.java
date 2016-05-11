@@ -19,13 +19,13 @@ public class Aluno {
 			this.nota.put(codigoEx, new Nota(nota, codigoEx));
 	}
 	
-	public Nota get(String codigoEx){
+	public Nota getNotaExame(String codigoEx){
 		return nota.get(codigoEx);
 	}
 	
 	@Override
 	public String toString(){
-		return matricula + ";" + nome;
+		return matricula + ";" + nome + ";";
 	}
 	
 	public String getTipoAluno(){

@@ -1,0 +1,6 @@
+package jrf;
+
+public class Trabalho {
+	private int tamGrupo;
+	private ArrayList<int> integrantes;
+};

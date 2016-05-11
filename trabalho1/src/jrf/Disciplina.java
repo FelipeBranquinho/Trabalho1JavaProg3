@@ -50,5 +50,18 @@ public class Disciplina {
 		ArrayList<Aluno> listAluno = new ArrayList<Aluno>(aluno.values());
 		Collections.sort(listAluno, Aluno.comparaAlunoNome);
 		
+		ArrayList<Exame> listExame = new ArrayList<Exame>(exame.values());
+		Collections.sort(listExame, Exame.comparaExameData);
+		
+		for(Aluno itAluno : listAluno){
+			itAluno.toString();
+			double media = 0;
+			for(Exame itExame : listExame){//Mudar esse for
+				Nota n = itAluno.getNotaExame(itExame.getCodigoExame());
+				if(n.getNota() != -1)
+					n.toString();
+				media += n.getNota();
+			}
+		}
 	}
 };

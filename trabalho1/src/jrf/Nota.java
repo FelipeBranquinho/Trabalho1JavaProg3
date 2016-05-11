@@ -1,7 +1,7 @@
 package jrf;
 
 public class Nota {
-	private double nota;
+	private double nota = -1;
 	private String codigoEx;
 	
 	public Nota(double nota, String codigoEx){

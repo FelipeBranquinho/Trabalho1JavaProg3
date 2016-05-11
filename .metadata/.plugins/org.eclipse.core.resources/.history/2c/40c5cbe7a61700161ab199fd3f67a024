@@ -1,0 +1,16 @@
+package jrf;
+import java.util.*;
+
+public class Trabalho {
+	private int tamGrupo;
+	private ArrayList<Integer> integrantes;
+	
+	public Trabalho(int tamGrupo){
+		this.tamGrupo = tamGrupo;
+		this.integrantes = new ArrayList<Integer>();
+	}
+	
+	public int getTamGrupo(){
+		return tamGrupo;
+	}
+};

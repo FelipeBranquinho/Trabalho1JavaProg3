@@ -1,0 +1,7 @@
+package jrf;
+import java.util.*;
+
+public class Trabalho {
+	private int tamGrupo;
+	private ArrayList<Integer> integrantes;
+};
